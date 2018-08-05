@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Juan C Gutierrez">
+    <meta name="description" content="A simple custom made To Do application using DOM Scripting and JS Module pattern.">
+    <title>To Do</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <!-- MAIN CSS -->
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="modal">
+
+            <header>
+                <h1>To Do</h1>
+            </header>
+
+            <form id="taskInputForm">
+                <input type="text" id="taskInput" placeholder="Type a task" autocomplete="off">
+                <input type="submit" id="taskInputBtn" value="&nbsp;">
+            </form>
+
+            <div id="filterBox">
+                <input type="text" id="filterInput" placeholder="Filter" autocomplete="off">
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <footer>
+                <div>
+                    <a href="#" id="clearAll">
+                        <span>Clear All</span>
+                        <i></i>
+                    </a>
+                </div>
+            </footer>
+
+        </div>
+
+        <div id="popup">
+            <button value="true" id="confirmYes">Yes</button>
+            <button value="false" id="confirmNo">No</button>
+        </div>
+    </div>
+    
+    <div id="bgImageBlack"></div>
+    <div id="bgImage"></div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

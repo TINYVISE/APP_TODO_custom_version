@@ -1,0 +1,319 @@
+/*
+TYNYVISE.COM
+----------------------------------------------------
+Auteur: Juan C Gutierrez
+Date:   Août 2018
+----------------------------------------------------
+*/
+
+html {
+    /* fonts */
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    /* structure */
+    margin: 0px;
+    padding: 0px;
+}
+
+#bgImageBlack,
+#bgImage {
+    /* structure */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#bgImageBlack {
+    /* structure */
+    z-index: 1;
+    /* appearance */
+    background-color: rgba( 0, 0, 0, 0.4 );
+}
+
+#bgImage {
+    /* structure */
+    z-index: -1;
+    /* appearance */
+    filter: blur(5px);
+    background-image: url( ../images/bg_woods.jpg );
+}
+
+#wrapper {
+    /* structure */
+    margin: 15px auto;
+    max-width: 380px;
+    z-index:10;
+    position: relative;
+    /* fonts */
+    text-align: middle;
+}
+
+.blur {
+    /* appearance */
+    filter: blur(5px);
+}
+
+textarea, 
+select, 
+input, 
+button { 
+    /* appearance */
+    outline: none; 
+}
+
+@media ( min-width: 768px ) {
+
+    #wrapper {
+        /* structure */
+        margin: 50px auto;
+    }
+}
+
+/* -------------------------------------------------- */
+/* MODAL */
+
+#modal {
+    /* structure */
+    max-width: 350px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 10px;
+    /* appearance */
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 0px 90px 0px rgba( 0, 0, 0, 1 );
+}
+
+#modal header,
+#modal #taskInputForm,
+#modal #filterBox,
+#modal #taskList,
+#modal footer {
+    padding: 0px 20px;
+}
+
+#modal header {
+    /* structure */
+    height: 63px;
+    display: flex;
+    align-items: flex-end;
+    /* appearance */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #f3f2e2;
+}
+
+#modal header h1 {
+    /* structure */
+    padding: 0px;
+    margin: 0px;
+    /* fonts */
+    font-size: 2rem;
+    font-weight: 300;
+    color: #abb094;
+    text-transform: uppercase;
+}
+
+/* -------------------------------------------------- */
+/* TASK INPUT FORM */
+
+#modal #taskInputForm {
+    /* structure */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+
+#modal #taskInputForm #taskInput {
+    /* structure */
+    padding: 5% 8%;
+    width: 60%;
+    margin-right: 3%;
+    /* fonts */
+    font-size: 1rem;
+    /* appearance */
+    border-radius: 5px;
+    background-color: #fbfcdb;
+    border: 1px solid #b6b951;
+}
+
+#modal #taskInputForm #taskInputBtn {
+    /* structure */
+    padding: 5% 7%;
+    width: 19%;
+    /* fonts */
+    font-size: 1rem;
+    color: #fff;
+    /* appearance */
+    border-radius: 5px;
+    background-color: #339900;
+    border: 1px solid #339900;
+    background-image: url( ../images/plus.svg );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px;
+} 
+
+/* -------------------------------------------------- */
+/* FILTER */
+
+#modal #filterBox {
+    /* structure */
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin: 0px;
+    width: initial;
+    display: none;
+    /* appearance */
+    background-color: #f3f3f0;
+}
+
+#modal #filterBox #filterInput {
+    /* structure */
+    padding: 5% 8%;
+    width: 84%;
+    /* fonts */
+    font-size: 1rem;
+    /* appearance */
+    border: 0px;
+    border-radius: 5px;
+    background-color: #e6e6dc;
+}
+
+/* -------------------------------------------------- */
+/* TASK LIST */
+
+#modal #taskList {
+    /* structure */
+    margin: 0px;
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: none;
+    /* appearance */
+    background-color: #f3f3f0;
+}
+
+#modal #taskList li {
+    /* structure */
+    margin-bottom: 15px;
+    /* appearance */
+    background-color: #fff;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba( 0, 0, 0, 0.1 );
+}
+
+#modal #taskList li:last-child {
+    /* structure */
+    margin-bottom: 0px;
+}
+
+#modal #taskList li > div {
+    /* structure */
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#modal #taskList li > div span {
+    /* structure */
+    display: block;
+    margin-right: 10px;
+    max-width: 85%;
+}
+
+#modal #taskList li > div i {
+    /* structure */
+    align-self: center;
+    width: 15px;
+    height: 15px;
+    display: block;
+    /* appearance */
+    background-image: url( ../images/x.svg );
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* -------------------------------------------------- */
+/* FOOTER */
+
+#modal footer {
+    /* structure */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: none;
+    /* appearance */
+    background-color: #fff;
+}
+
+#modal footer > div {
+    /* structure */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 25px;
+    /* fonts */
+    text-align: right;
+}
+
+#modal footer > div a {
+    /* structure */
+    display: block;
+}
+
+#modal footer > div a:link,
+#modal footer > div a:hover,
+#modal footer > div a:visited,
+#modal footer > div a:active {
+    /* fonts */
+    text-decoration: none;
+}
+
+#modal footer > div span {
+    /* structure */
+    display: inline-block;
+    margin-right: 2px;
+    /* fonts */
+    color: #a8060e;
+}
+
+#modal footer > div i {
+    /* structure */
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    /* appearance */
+    background-image: url( ../images/x.svg );
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#modal #clearAll {
+    display: none;
+}
+
+/* -------------------------------------------------- */
+/* POPUPS */
+
+#popup {
+    /* structure */
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    position: absolute;
+    display: none;
+    padding: 30px;
+    /* appearance */
+    background-color: #fff;
+    box-shadow: 0px 0px 40px 0px rgba( 0, 0, 0, 0.5 );
+    border-radius: 4px;
+}
+
+/* -------------------------------------------------- */
+
